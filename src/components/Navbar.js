@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="d-flex px-3" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <NavLink className='nav-link' to='/'>Home</NavLink>
-            <NavLink className='nav-link' to='/restaurants/search'>Search</NavLink>
+            <NavLink className='nav-link' to='/restaurants'>Restaurants</NavLink>
             <NavLink className='nav-link' to='/restaurants/new'>Create</NavLink>
           </div>
         </div>

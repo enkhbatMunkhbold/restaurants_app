@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "../stylesheets/restaurant.css"
 
-const Restaurant = () => {
+const RestaurantCard = ({ restaurant }) => {
+
+  const { id, name, image, location, isFavorite } = restaurant
+  const [ favorite, setFavorite ] = useState(isFavorite)
+  
   return (
-    <div>Restaurant</div>
+    <li className='card'>
+      <img src={image} alt={name} />
+      <h5>{name}</h5>
+      <p>Location: {location}</p>      
+    </li>
   )
 }
 
-export default Restaurant
+export default RestaurantCard

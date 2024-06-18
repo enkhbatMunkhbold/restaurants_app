@@ -4,9 +4,9 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import List from './components/List';
 import Create from './components/Create';
-import Search from './components/Search';
+// import Search from './components/Search';
 import Restaurant from './components/Restaurant';
-import './App.css';
+import './stylesheets/app.css';
 
 const App = () => {
 
@@ -19,16 +19,18 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/restaurants" element={<List restaurants={restaurants}/>} />
-        <Route path="/restaurants/new" element={<Create />} />
-        <Route path="/restaurants/search" element={<Search />} />
-        <Route path="/restaurant/:id" element={<Restaurant />} />
-      </Routes>
+    <div className='App'>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/restaurants" element={<List restaurants={restaurants}/>} />
+          <Route path="/restaurants/new" element={<Create />} />
+          {/* <Route path="/restaurants/search" element={<Search />} /> */}
+          <Route path="/restaurant/:id" element={<Restaurant />} />
+        </Routes>
     </Router>
+    </div>
   );
 }
 

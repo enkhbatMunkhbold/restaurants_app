@@ -3,7 +3,8 @@ import React from 'react'
 const Create = () => {
   return (
     <div>
-      <h1>Create</h1>
+      <h2>Create</h2>
+      <hr className='border-line'/>
     </div>
   )
 }

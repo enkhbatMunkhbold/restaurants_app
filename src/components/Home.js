@@ -3,7 +3,8 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <h2>List of Restaurants</h2>
+      <h2>Home</h2>
+      <hr className='border-line'/>
     </div>
   )
 }
