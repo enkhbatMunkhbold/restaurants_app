@@ -1,10 +1,12 @@
 import React from 'react'
+import Search from './Search'
+// import "../stylesheets/home.css"
 
-const Home = () => {
+const Home = ({ onSearch }) => {
   return (
-    <div>
-      <h2>Home</h2>
-      <hr className='border-line'/>
+    <div  className='home'>
+      <h1>Your Favorite Local Restaurants</h1>
+      <Search />
     </div>
   )
 }

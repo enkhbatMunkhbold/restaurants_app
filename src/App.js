@@ -11,6 +11,7 @@ import './stylesheets/app.css';
 const App = () => {
 
   const [restaurants, setRestaurants] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:6001/restaurants')
@@ -18,17 +19,27 @@ const App = () => {
     .then(data => setRestaurants(data));
   }, []);
 
+  function handleUpdateList(updatedRestaurant) {
+    setRestaurants(prevState => prevState.map(restaurant => restaurant.id === updatedRestaurant.id? updatedRestaurant : restaurant))
+  }
+
   function handleAddRestaurant(data) {
     setRestaurants([...restaurants, data])
   }
+
+  function handleSearch(input) {
+    setSearch(input)
+  }
+
+  const displayRestaurants = search.length !== 0 ? restaurants.filter(rest => rest.name.toLowerCase().includes(search.toLowerCase())) : restaurants
 
   return (
     <div className='App'>
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/restaurants" element={<List restaurants={restaurants}/>} />
+          <Route path="/" element={<Home onSearch={handleSearch}/>} />
+          <Route path="/restaurants" element={<List restaurants={displayRestaurants} onUpdateList={handleUpdateList}/>} />
           <Route path="/restaurants/new" element={<Create onAddRestaurant={handleAddRestaurant}/>} />
           <Route path="/restaurants/:id" element={<Restaurant />} />
         </Routes>
