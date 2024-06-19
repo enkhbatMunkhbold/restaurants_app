@@ -18,6 +18,10 @@ const App = () => {
     .then(data => setRestaurants(data));
   }, []);
 
+  function handleAddRestaurant(data) {
+    setRestaurants([...restaurants, data])
+  }
+
   return (
     <div className='App'>
       <Router>
@@ -25,9 +29,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/restaurants" element={<List restaurants={restaurants}/>} />
-          <Route path="/restaurants/new" element={<Create />} />
-          {/* <Route path="/restaurants/search" element={<Search />} /> */}
-          <Route path="/restaurant/:id" element={<Restaurant />} />
+          <Route path="/restaurants/new" element={<Create onAddRestaurant={handleAddRestaurant}/>} />
+          <Route path="/restaurants/:id" element={<Restaurant />} />
         </Routes>
     </Router>
     </div>
