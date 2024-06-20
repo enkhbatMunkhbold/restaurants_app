@@ -12,9 +12,12 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-h2 {
+h1 {
+  /* color: #ecb176;
+  text-shadow: 0.5px 0.5px 1px black, 0 0 1em yellow */
+  font-weight: bold;
   color: #ecb176;
-  text-shadow: 0.5px 0.5px 1px black, 0 0 1em yellow
+  text-shadow: 0.5px 0.5px 1px black
 }
 
 hr.border-line {

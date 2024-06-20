@@ -4,7 +4,7 @@
   text-shadow: 0.5px 0.5px 1px black
 }
 
-/* div.home {
+div.home {
   position: relative;
   height: 100%;
 }
@@ -22,7 +22,7 @@ div.home:before {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-} */
+}
 
 .searchbar {
   margin: 3rem 2rem 2rem auto;

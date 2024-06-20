@@ -10,6 +10,7 @@ const Search = ({ onSearch }) => {
   return (
     <div className="input-group searchbar">
       <input type="search" className="form-control rounded" placeholder="Search for restaurant..." aria-label="Search" aria-describedby="search-addon" onChange={handleChange}/>
+      <button className="btn btn-outline-primary" type="button" id="search-addon">Search</button>
     </div>
   )
 }

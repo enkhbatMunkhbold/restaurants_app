@@ -43,7 +43,7 @@ const Create = ({ onAddRestaurant }) => {
   return (
     <div>
       <div className='new-restaurant-form'>
-        <h2>New Restaurant</h2>
+        <h1>New Restaurant</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="restaurantName" className="form-label">Restaurant Name</label>

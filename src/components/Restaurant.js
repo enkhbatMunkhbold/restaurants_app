@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import "../stylesheets/restaurant.css"
 
-const Restaurant= ({ restaurant, onUpdateList }) => {
+const Restaurant= ({ restaurant, onUpdateList, onSelectRestaurant }) => {
 
   const { id, name, image, location, isFavorite } = restaurant
   const [ favorite, setFavorite ] = useState(isFavorite)
+  const navigate = useNavigate()
   
   function handleFavoriteClick(chooseId) {
     fetch(`http://localhost:6001/restaurants/${chooseId}`, {
@@ -22,6 +24,11 @@ const Restaurant= ({ restaurant, onUpdateList }) => {
     handleFavoriteClick(id)
   }
 
+  function handleButtonClick() {
+    navigate(`/restaurants/${id}`)
+    onSelectRestaurant(restaurant)
+  }
+
   return (
     <li className='card position-relative'>
       <img src={image} alt={name} />
@@ -30,7 +37,7 @@ const Restaurant= ({ restaurant, onUpdateList }) => {
         <p>Location: {location}</p> 
         <div className="btn-toolbar justify-content-between" role="toolbar">
           <div className="btn-group" role="group" aria-label="button">
-            <button className='btn btn-light'>More info...</button>
+            <button className='btn btn-light' onClick={handleButtonClick}>More info...</button>
           </div>
           <div className="favorite-group">
             <div className="favorite-group-icon">

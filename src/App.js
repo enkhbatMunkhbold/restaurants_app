@@ -5,13 +5,14 @@ import Home from './components/Home';
 import List from './components/List';
 import Create from './components/Create';
 // import Search from './components/Search';
-import Restaurant from './components/Restaurant';
+import RestaurantDetails from './components/RestaurantDetails';
 import './stylesheets/app.css';
 
 const App = () => {
 
   const [restaurants, setRestaurants] = useState([]);
   const [search, setSearch] = useState('');
+  const [selected, setSelected] = useState({})
 
   useEffect(() => {
     fetch('http://localhost:6001/restaurants')
@@ -31,6 +32,10 @@ const App = () => {
     setSearch(input)
   }
 
+  function handleSelectRestaurant(restaurant) {
+    setSelected(restaurant)
+  }
+
   const displayRestaurants = search.length !== 0 ? restaurants.filter(rest => rest.name.toLowerCase().includes(search.toLowerCase())) : restaurants
 
   return (
@@ -39,9 +44,15 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/restaurants" element={<List restaurants={displayRestaurants} onUpdateList={handleUpdateList} onSearch={handleSearch}/>} />
+          <Route path="/restaurants" element={
+            <List restaurants={displayRestaurants} 
+              onUpdateList={handleUpdateList} 
+              onSearch={handleSearch}
+              onSelectRestaurant={handleSelectRestaurant}
+            />} 
+          />
           <Route path="/restaurants/new" element={<Create onAddRestaurant={handleAddRestaurant}/>} />
-          <Route path="/restaurants/:id" element={<Restaurant />} />
+          <Route path="/restaurants/:id" element={<RestaurantDetails restaurant={selected}/>} />
         </Routes>
     </Router>
     </div>

@@ -19,7 +19,7 @@
       "name": "Eureka",
       "image": "./images/eureka.jpg",
       "location": "789 Bay St, Oakland, CA 94607",
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "4",
