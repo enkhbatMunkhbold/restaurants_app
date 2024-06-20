@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../stylesheets/restaurant.css"
 
-const RestaurantCard = ({ restaurant, onUpdateList }) => {
+const Restaurant= ({ restaurant, onUpdateList }) => {
 
   const { id, name, image, location, isFavorite } = restaurant
   const [ favorite, setFavorite ] = useState(isFavorite)
@@ -17,22 +17,34 @@ const RestaurantCard = ({ restaurant, onUpdateList }) => {
     .then(updatedRestaurant => onUpdateList(updatedRestaurant))
   }
 
-  function handleButtonClick() {
+  function handleLikeClick() {
     setFavorite(prevState => !prevState);
     handleFavoriteClick(id)
   }
 
   return (
-    <li className='card'>
+    <li className='card position-relative'>
       <img src={image} alt={name} />
-      <h5>{name}</h5>
-      <p>Location: {location}</p>   
-      {favorite ? 
-        (<button  className='primary'onClick={handleButtonClick}>Favorite</button>) : 
-        (<button className='secondary'onClick={handleButtonClick}>Not Favorite</button>)
-      }   
+      <div className="container">
+        <h5>{name}</h5>
+        <p>Location: {location}</p> 
+        <div className="btn-toolbar justify-content-between" role="toolbar">
+          <div className="btn-group" role="group" aria-label="button">
+            <button className='btn btn-light'>More info...</button>
+          </div>
+          <div className="favorite-group">
+            <div className="favorite-group-icon">
+              {favorite ? 
+                ( <i className="bi bi-heart-fill" onClick={handleLikeClick}></i>) : 
+                ( <i className="bi bi-heart" onClick={handleLikeClick}></i>)
+              }
+            </div>               
+          </div>
+        </div>
+           
+      </div>
     </li>
   )
 }
 
-export default RestaurantCard
+export default Restaurant

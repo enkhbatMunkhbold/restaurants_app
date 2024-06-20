@@ -38,8 +38,8 @@ const App = () => {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home onSearch={handleSearch}/>} />
-          <Route path="/restaurants" element={<List restaurants={displayRestaurants} onUpdateList={handleUpdateList}/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/restaurants" element={<List restaurants={displayRestaurants} onUpdateList={handleUpdateList} onSearch={handleSearch}/>} />
           <Route path="/restaurants/new" element={<Create onAddRestaurant={handleAddRestaurant}/>} />
           <Route path="/restaurants/:id" element={<Restaurant />} />
         </Routes>

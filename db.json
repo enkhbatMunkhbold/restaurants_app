@@ -12,7 +12,7 @@
       "name": "Hasumi Sushi",
       "image": "./images/hasumi_sushi.jpg",
       "location": "456 Tech Ave, San Jose, CA 95110",
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "3",

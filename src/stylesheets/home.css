@@ -26,4 +26,5 @@ div.home:before {
 
 .searchbar {
   margin: 3rem 2rem 2rem auto;
+  width: 50%;
 }

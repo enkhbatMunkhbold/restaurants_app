@@ -4,15 +4,13 @@ import "../stylesheets/home.css"
 const Search = ({ onSearch }) => {
 
   function handleChange(e) {
+    console.log(e.target.value)
     onSearch(e.target.value)
   }
   return (
-    <div class="input-group mb-3 w-75 searchbar">
-      <input type="text" class="form-control" placeholder="Search for restaurant..." aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-      <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2">Search</span>
-      </div>
-    </div>    
+    <div className="input-group searchbar">
+      <input type="search" className="form-control rounded" placeholder="Search for restaurant..." aria-label="Search" aria-describedby="search-addon" onChange={handleChange}/>
+    </div>
   )
 }
 

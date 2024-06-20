@@ -7,6 +7,10 @@
   margin: 1rem;
   width: 20%;
   background-color: #fed8b1;
+  text-align: left;
+}
+.container {
+  padding: 0.8rem;
 }
 
 .card img {
@@ -15,7 +19,11 @@
   float: right;
 }
 
-.card button {
+.bi {
+  text-align: right;
+}
+
+/* .card button {
   margin-top: 0.5rem;
 }
 
@@ -31,7 +39,7 @@ button {
 button.primary {
   background-color: var(--orange);
   color: white;
-}
+} */
 
 @media (min-width: 768px) {
   .cards {
