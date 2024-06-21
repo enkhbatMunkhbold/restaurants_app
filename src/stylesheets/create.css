@@ -1,3 +1,7 @@
+.create {
+  padding: 4rem;
+}
+
 div.new-restaurant-form {
   height: 80%;
   display: flex;

@@ -3,7 +3,7 @@ import "../stylesheets/details.css"
 
 const RestaurantDetails = ({restaurant}) => {
 
-  const { id, name, image, location, isFavorite, phoneNumber, rating } = restaurant 
+  const { name, image, location, isFavorite, phoneNumber, rating } = restaurant 
   
   return (
     <div className='details container'>
@@ -17,7 +17,7 @@ const RestaurantDetails = ({restaurant}) => {
             <p><span>Phone number:</span> {phoneNumber}</p>
             <p><span>Rating:</span> {rating}</p> 
             <p><span>Favorite:</span>
-              {isFavorite ? <i className="bi bi-hand-thumbs-up"></i> : 
+              {isFavorite ? <i className="bi bi-hand-thumbs-up-fill"></i> : 
                 <i className="bi bi-hand-thumbs-down"></i>}
             </p>             
           </div>

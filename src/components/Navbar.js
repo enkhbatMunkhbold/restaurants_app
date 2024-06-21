@@ -13,7 +13,7 @@ const Navbar = () => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="d-flex px-3" id="navbarNavAltMarkup">
+        <div className="d-flex px-3">
           <div className="navbar-nav">
             <NavLink className='nav-link' to='/'>Home</NavLink>
             <NavLink className='nav-link' to='/restaurants'>Restaurants</NavLink>

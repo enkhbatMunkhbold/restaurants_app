@@ -41,7 +41,7 @@
       "name": "Ramen Hiroshi",
       "image": "../images/ramon_hiroshi.jpg",
       "location": "654 Shattuck Ave, Berkeley, CA 94704",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(341) 968-2353",
       "rating": 2.9
     },
@@ -86,7 +86,7 @@
       "name": "Main Street Kithen & Bar",
       "image": "../images/main_street_kitchen_bar.jpg",
       "location": "321 Redwood St, Redwood City, CA 94063",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(408) 321-2141",
       "rating": 3.9
     },

@@ -30,7 +30,7 @@ const Restaurant= ({ restaurant, onUpdateList, onSelectRestaurant }) => {
   }
 
   return (
-    <li className='card position-relative'>
+    <div className='card position-relative'>
       <img src={image} alt={name} />
       <div className="container">
         <h5>{name}</h5>
@@ -47,10 +47,9 @@ const Restaurant= ({ restaurant, onUpdateList, onSelectRestaurant }) => {
               }
             </div>               
           </div>
-        </div>
-           
+        </div>           
       </div>
-    </li>
+    </div>
   )
 }
 
