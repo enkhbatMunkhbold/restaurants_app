@@ -1,22 +1,25 @@
 import React from 'react'
+import "../stylesheets/details.css"
 
 const RestaurantDetails = ({restaurant}) => {
 
-  const { id, name, image, location, isFavorite } = restaurant 
-  console.log('image:', image)
+  const { id, name, image, location, isFavorite, phoneNumber, rating } = restaurant 
+  
   return (
-    <div>
+    <div className='details container'>
       <h1>{name}</h1>
       <hr className='border-line'/>
-      <img src={restaurant.image} alt={name}/>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-6'>
-            
-          </div>
-          <div className='col-md-6'>
+      <div className='row'>
+        <div className='col-sm-4 mx-auto'>
+          <img src={image} alt={name}/>
+          <div className='text'>
             <p><span>Address:</span> {location}</p>
-            {/* <p>{restaurant.display_phone}</p> */}
+            <p><span>Phone number:</span> {phoneNumber}</p>
+            <p><span>Rating:</span> {rating}</p> 
+            <p><span>Favorite:</span>
+              {isFavorite ? <i className="bi bi-hand-thumbs-up"></i> : 
+                <i className="bi bi-hand-thumbs-down"></i>}
+            </p>             
           </div>
         </div>
       </div>
