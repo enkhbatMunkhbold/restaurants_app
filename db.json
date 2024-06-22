@@ -68,7 +68,7 @@
       "name": "Torsap Thai Kitchen",
       "image": "../images/torsap_thai_kitchen.jpg",
       "location": "456 Sunnyvale Ave, Sunnyvale, CA 94086",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(408) 923-9531",
       "rating": 3.4
     },
@@ -98,6 +98,15 @@
       "isFavorite": true,
       "phoneNumber": "(925) 253-7763",
       "rating": 4
+    },
+    {
+      "id": "e0a2",
+      "name": "Haya Ramen",
+      "image": "https://www.beyondthecreek.com/wp-content/uploads/2020/02/haya-ramen-pleasant-hill-outside-dev.jpg",
+      "location": "35 Crescent Dr. Ste D. Pleasant Hill, CA 94523",
+      "isFavorite": false,
+      "phoneNumber": "(925) 849-6171",
+      "rating": "3.1"
     }
   ]
 }
