@@ -1,32 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import "../stylesheets/restaurant.css"
 
-const Restaurant= ({ restaurant, onUpdateList, onSelectRestaurant }) => {
+const Restaurant= ({ restaurant, onUpdateList }) => {
 
-  const { id, name, image, location, isFavorite } = restaurant
-  const [ favorite, setFavorite ] = useState(isFavorite)
   const navigate = useNavigate()
+  const { id, name, image, location, isFavorite } = restaurant  
   
-  function handleFavoriteClick(chooseId) {
-    fetch(`http://localhost:6001/restaurants/${chooseId}`, {
+  function handleFavoriteClick() {
+    
+    fetch(`http://localhost:6001/restaurants/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "Application/JSON"
       },
       body: JSON.stringify({isFavorite: !isFavorite})
     }).then(res => res.json())
-    .then(updatedRestaurant => onUpdateList(updatedRestaurant))
-  }
-
-  function handleLikeClick() {
-    setFavorite(prevState => !prevState);
-    handleFavoriteClick(id)
+  .then(data => {
+    console.log("Data from BE:", data)
+    onUpdateList(data)
+  })
   }
 
   function handleButtonClick() {
     navigate(`/restaurants/${id}`)
-    onSelectRestaurant(restaurant)
+    // onSelectRestaurant(restaurant)
   }
 
   return (
@@ -41,9 +39,9 @@ const Restaurant= ({ restaurant, onUpdateList, onSelectRestaurant }) => {
           </div>
           <div className="favorite-group">
             <div className="favorite-group-icon">
-              {favorite ? 
-                ( <i className="bi bi-heart-fill" onClick={handleLikeClick}></i>) : 
-                ( <i className="bi bi-heart" onClick={handleLikeClick}></i>)
+              {isFavorite? 
+                ( <i className="bi bi-heart-fill" onClick={handleFavoriteClick}></i>) : 
+                ( <i className="bi bi-heart" onClick={handleFavoriteClick}></i>)
               }
             </div>               
           </div>

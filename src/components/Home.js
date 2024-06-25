@@ -3,7 +3,7 @@ import Search from './Search'
 import "../stylesheets/home.css"
 import Restaurant from './Restaurant';
 
-const Home = ({ restaurants, onUpdateList, onSelectRestaurant }) => {
+const Home = ({ restaurants, onUpdateList }) => {
 
   const [foundRestaurants, setFoundRestaurants] = useState([]);
 
@@ -21,12 +21,14 @@ const Home = ({ restaurants, onUpdateList, onSelectRestaurant }) => {
     setFoundRestaurants(filtered)
   }
 
+  // console.log('foundRestaurants:', foundRestaurants)
+
   const displayRestaurants = foundRestaurants.map(rest => {
     return (
       <Restaurant key={rest.id} 
         restaurant={rest} 
         onUpdateList={onUpdateList}
-        onSelectRestaurant={onSelectRestaurant}
+        // onSelectRestaurant={onSelectRestaurant}
       />
     )
   }) 

@@ -1,9 +1,19 @@
-import React from 'react'
-import "../stylesheets/details.css"
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import "../stylesheets/details.css";
 
-const RestaurantDetails = ({restaurant}) => {
+const RestaurantDetails = () => {
 
+  const params = useParams();
+  const restaurantId = +(params.id);
+  const [restaurant, setRestaurant] = useState({})
   const { name, image, location, isFavorite, phoneNumber, rating } = restaurant 
+
+  useEffect(() => {
+    fetch(`http://localhost:6001/restaurants/${restaurantId}`)
+    .then(res => res.json())
+    .then(data => setRestaurant(data))
+  }, [restaurantId])
   
   return (
     <div className='details container'>

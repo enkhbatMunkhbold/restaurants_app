@@ -5,7 +5,7 @@
       "name": "The Breakfast Club",
       "image": "../images/the_breakfast_club.jpg",
       "location": "123 Market St, San Francisco, CA 94103",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(415) 234-5656",
       "rating": 3.5
     },
@@ -14,7 +14,7 @@
       "name": "Hasumi Sushi",
       "image": "../images/hasumi_sushi.jpg",
       "location": "456 Tech Ave, San Jose, CA 95110",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(408) 010-3223",
       "rating": 3.8
     },
@@ -32,7 +32,7 @@
       "name": "Manakish Oven & Grill",
       "image": "../images/manakish_oven_grill.jpg",
       "location": "321 University Ave, Palo Alto, CA 94301",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(669) 645-6233",
       "rating": 3
     },
@@ -50,7 +50,7 @@
       "name": "Pacific Catch",
       "image": "../images/pacific_catch.jpg",
       "location": "987 Castro St, Mountain View, CA 94041",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(650) 123-7892",
       "rating": 3.3
     },
@@ -59,7 +59,7 @@
       "name": "Vanda Thai",
       "image": "../images/vanda_thai.jpg",
       "location": "123 Fremont Blvd, Fremont, CA 94538",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(341) 778-8771",
       "rating": 2.7
     },
@@ -86,7 +86,7 @@
       "name": "Main Street Kithen & Bar",
       "image": "../images/main_street_kitchen_bar.jpg",
       "location": "321 Redwood St, Redwood City, CA 94063",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(408) 321-2141",
       "rating": 3.9
     },
@@ -113,7 +113,7 @@
       "name": "Dumpling House Mongolian Cuisine",
       "image": "https://lh3.googleusercontent.com/p/AF1QipOEoVBOq4O9T_XJlOCA5o6H1s6YhEPKSkbSnPvo=s680-w680-h510",
       "location": "12221 San Pablo Ave #6, Richmond, CA 94805",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(510) 234-9898",
       "rating": "4.8"
     }

@@ -2,7 +2,7 @@ import React from 'react'
 import Restaurant from './Restaurant'
 import "../stylesheets/list.css"
 
-const List = ({ restaurants, onUpdateList, onSelectRestaurant }) => {
+const List = ({ restaurants, onUpdateList }) => {
 
   const restaurantsList = restaurants.map(restaurant => {
     return ( 
@@ -10,7 +10,7 @@ const List = ({ restaurants, onUpdateList, onSelectRestaurant }) => {
         key={restaurant.id} 
         restaurant={restaurant} 
         onUpdateList={onUpdateList} 
-        onSelectRestaurant={onSelectRestaurant}
+        // onSelectRestaurant={onSelectRestaurant}
       />
     )
   })
