@@ -5,8 +5,7 @@ import Restaurant from './Restaurant';
 
 const Home = ({ restaurants, onUpdateList }) => {
 
-  const [foundRestaurants, setFoundRestaurants] = useState([]);
-
+  const [search, setSearch] = useState('')
   const initialData = {
     name: '',
     image: '../images/default-image.png',
@@ -17,18 +16,16 @@ const Home = ({ restaurants, onUpdateList }) => {
   }
 
   function handleSearch(input) {
-    const filtered = restaurants.filter(rest => rest.name.toLowerCase().includes(input.toLowerCase()))
-    setFoundRestaurants(filtered)
+    setSearch(input)
   }
 
-  // console.log('foundRestaurants:', foundRestaurants)
+   const filteredRestaurants = restaurants.filter(rest => rest.name.toLowerCase().includes(search.toLowerCase()))
 
-  const displayRestaurants = foundRestaurants.map(rest => {
+  const displayRestaurants = filteredRestaurants.map(rest => {
     return (
       <Restaurant key={rest.id} 
         restaurant={rest} 
         onUpdateList={onUpdateList}
-        // onSelectRestaurant={onSelectRestaurant}
       />
     )
   }) 
@@ -39,7 +36,7 @@ const Home = ({ restaurants, onUpdateList }) => {
       <hr className='border-line'/>
       <Search onSearch={handleSearch}/><br/><br/>
       <ul className='cards'>
-        {foundRestaurants.length === 0 ? <Restaurant restaurant={initialData}/> : displayRestaurants}
+        {search.length === 0 ? <Restaurant restaurant={initialData}/> : displayRestaurants}
       </ul>      
     </div>
   )

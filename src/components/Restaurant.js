@@ -6,6 +6,7 @@ const Restaurant= ({ restaurant, onUpdateList }) => {
 
   const navigate = useNavigate()
   const { id, name, image, location, isFavorite } = restaurant  
+  console.log('restaurant:', restaurant)
   
   function handleFavoriteClick() {
     
@@ -17,14 +18,12 @@ const Restaurant= ({ restaurant, onUpdateList }) => {
       body: JSON.stringify({isFavorite: !isFavorite})
     }).then(res => res.json())
   .then(data => {
-    console.log("Data from BE:", data)
     onUpdateList(data)
   })
   }
 
   function handleButtonClick() {
     navigate(`/restaurants/${id}`)
-    // onSelectRestaurant(restaurant)
   }
 
   return (

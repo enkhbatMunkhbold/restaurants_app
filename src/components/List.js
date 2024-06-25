@@ -10,7 +10,6 @@ const List = ({ restaurants, onUpdateList }) => {
         key={restaurant.id} 
         restaurant={restaurant} 
         onUpdateList={onUpdateList} 
-        // onSelectRestaurant={onSelectRestaurant}
       />
     )
   })
