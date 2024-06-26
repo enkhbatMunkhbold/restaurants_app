@@ -1,3 +1,4 @@
+
 # Phase-2-Project 
 
 ## Description  
@@ -28,14 +29,14 @@ The client side of the application works using local url addresses:
 
 ## Home 
 
-When a user opens the **Review** page of each movie, he/she can see the reviews to the movie.  Then, user can put his/her name and write a new review. The push **SEND** button on the below, after what the review will appear on a upper section, below the preexisted reviews. 
+When a user goes into **Restaurant Finder** app it opens up Home page of the app first. A user can see the search input field with button and the default restaurant card below the search field. When user inputs the word into the search field and clicks the **search** button, the list of the restaurants appears in the place, where the default placeholder card used to show up. User can go to details page in every individual restaurant by clicking **Learn more...** button or even *favorite* them.  
 
 ## Restaurants List  
 
-If the user wants to delete one of the reviews, then he/she needs to bring the mouse pointer to the desired review. When user hovers over a review, there will appear **x** symbol at the end of the review. Then, the user can click on that **x** symbol and the review will disappear. It also will be deleted in the server side as well.
+In this page a user can see the whole list of the local restaurants, by scrolling the list up and down. If user wants to find out more details about a restaurant, then he/she can click on **Learn more...** button on the bottom left side of the each restaurant card, which takes a user into the details page of every individual restaurant card.
 
 ## Create a New Restaurant
 
-If user wants to edit his/her review comment, then he or she can move a mouse pointer over the review, which want to edit and if click on the review it will show underline and blinking text cursor. When user finishes editing review, then he/she just hits **ENTER** key and the review updates. It also updates in the server side using Sinatra framework based on Rack,   
+If user wants to add a **New Restaurant** into the list, he/she can to to the Create New Restaurant page, by clicking on **Create** word on the top right side of the application. Then, user goes to the page, where he/she can fill out the form for all necessary information to create a restaurant card.  
 
 ## Demo  
