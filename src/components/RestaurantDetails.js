@@ -5,7 +5,7 @@ import "../stylesheets/details.css";
 const RestaurantDetails = () => {
 
   const params = useParams();
-  const restaurantId = +(params.id);
+  const restaurantId = params.id;
   const [restaurant, setRestaurant] = useState({})
   const { name, image, location, isFavorite, phoneNumber, rating } = restaurant 
 

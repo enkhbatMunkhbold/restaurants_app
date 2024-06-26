@@ -5,7 +5,7 @@
       "name": "The Breakfast Club",
       "image": "../images/the_breakfast_club.jpg",
       "location": "123 Market St, San Francisco, CA 94103",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(415) 234-5656",
       "rating": 3.5
     },
@@ -14,7 +14,7 @@
       "name": "Hasumi Sushi",
       "image": "../images/hasumi_sushi.jpg",
       "location": "456 Tech Ave, San Jose, CA 95110",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(408) 010-3223",
       "rating": 3.8
     },

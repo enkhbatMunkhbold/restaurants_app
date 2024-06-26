@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Phase-2-Project 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description  
 
-## Available Scripts
+ **Restaurant Finder** app helps users to search and find the local restaurants and even insert a new restaurant to the database. The app is built up from 3 pages, home, restaurants and create, which are on the top right of the screen. User can select either of those pages and go to page to get the corresponding information.
 
-In the project directory, you can run:
+## Table Of Contents 
 
-### `npm start`
+- [Work Environment](#work-environment)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Home](#home)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Restaurants List](#restaurants-list)
 
-### `npm test`
+- [Create a New Restaurant](#create-a-new-restaurant)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Demo](#demo)
+  
 
-### `npm run build`
+## Work Environment  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The **Restaurant Finder** app is built in React, which is a JavaScript library. 
+The client side of the application works using local url addresses:
+- Home: - <http://localhost:3000/>  
+- Restaurants List: - <http://localhost:3000/restaurants>
+- Create New Restaurant: -<http://localhost:3000/restaurants/new>
+- Selected Restaurant: -<http://localhost:3000/restaurants/:id> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Home 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When a user opens the **Review** page of each movie, he/she can see the reviews to the movie.  Then, user can put his/her name and write a new review. The push **SEND** button on the below, after what the review will appear on a upper section, below the preexisted reviews. 
 
-### `npm run eject`
+## Restaurants List  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If the user wants to delete one of the reviews, then he/she needs to bring the mouse pointer to the desired review. When user hovers over a review, there will appear **x** symbol at the end of the review. Then, the user can click on that **x** symbol and the review will disappear. It also will be deleted in the server side as well.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Create a New Restaurant
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If user wants to edit his/her review comment, then he or she can move a mouse pointer over the review, which want to edit and if click on the review it will show underline and blinking text cursor. When user finishes editing review, then he/she just hits **ENTER** key and the review updates. It also updates in the server side using Sinatra framework based on Rack,   
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Demo  
