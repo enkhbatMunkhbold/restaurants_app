@@ -40,3 +40,5 @@ In this page a user can see the whole list of the local restaurants, by scrollin
 If user wants to add a **New Restaurant** into the list, he/she can to to the Create New Restaurant page, by clicking on **Create** word on the top right side of the application. Then, user goes to the page, where he/she can fill out the form for all necessary information to create a restaurant card.  
 
 ## Demo  
+
+![project-demo](https://github.com/enkhbatMunkhbold/phase-2-project/assets/33409864/cc401550-b840-45e7-ada5-1d961d18ffe6)
