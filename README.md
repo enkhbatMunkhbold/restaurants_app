@@ -41,4 +41,5 @@ If user wants to add a **New Restaurant** into the list, he/she can to to the Cr
 
 ## Demo  
 
+Here is a GIF of the app to demonstrate how **Restaurant Finder** app works.
 ![project-demo](https://github.com/enkhbatMunkhbold/phase-2-project/assets/33409864/cc401550-b840-45e7-ada5-1d961d18ffe6)
