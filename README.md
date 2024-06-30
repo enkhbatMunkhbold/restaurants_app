@@ -3,7 +3,7 @@
 
 ## Description  
 
- **Restaurant Finder** app helps users to search and find the local restaurants and even insert a new restaurant to the database. The app is built up from 3 pages, home, restaurants and create, which are on the top right of the screen. User can select either of those pages and go to page to get the corresponding information.
+ **Restaurant Finder** app helps users to search and find the local restaurants and even insert a new restaurant to the database. The app is built up from 3 pages, home, restaurants and create, which are on the top right of the screen. User can select any of those pages and go to the selected page to get the corresponding information.
 
 ## Table Of Contents 
 
