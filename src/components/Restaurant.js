@@ -6,20 +6,18 @@ const Restaurant= ({ restaurant, onUpdateList }) => {
 
   const navigate = useNavigate()
   const { id, name, image, location, isFavorite } = restaurant  
-  console.log('restaurant:', restaurant)
   
-  function handleFavoriteClick() {
-    
-    fetch(`http://localhost:6001/restaurants/${id}`, {
+  function handleFavoriteClick() {    
+    fetch(`/restaurants/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "Application/JSON"
       },
       body: JSON.stringify({isFavorite: !isFavorite})
     }).then(res => res.json())
-  .then(data => {
-    onUpdateList(data)
-  })
+    .then(data => {
+      onUpdateList(data)
+    })
   }
 
   function handleButtonClick() {

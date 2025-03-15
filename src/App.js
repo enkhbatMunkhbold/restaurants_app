@@ -12,7 +12,7 @@ const App = () => {
   const [restaurants, setRestaurants] = useState([]);  
 
   useEffect(() => {
-    fetch('http://localhost:6001/restaurants')
+    fetch('/restaurants')
     .then(res => res.json())
     .then(data => setRestaurants(data));
   }, []);

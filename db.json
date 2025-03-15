@@ -77,7 +77,7 @@
       "name": "Daryoush Persian Cuisine",
       "image": "../images/daryoush_persian_cuisine.jpg",
       "location": "789 Santa Clara St, Santa Clara, CA 95050",
-      "isFavorite": true,
+      "isFavorite": false,
       "phoneNumber": "(669) 851-9070",
       "rating": 3.6
     },
@@ -95,7 +95,7 @@
       "name": "Sakana Sushi",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs-uBnxMORefAVoZVz7TgJr-iXxO7w2Lg-Q&s",
       "location": "1280 Newell Ave. Walnut Creek, CA 94596",
-      "isFavorite": false,
+      "isFavorite": true,
       "phoneNumber": "(925) 253-7763",
       "rating": 4
     },
@@ -109,13 +109,13 @@
       "rating": "3.1"
     },
     {
-      "id": "2fac",
+      "id": "a2f4",
       "name": "Dumpling House Mongolian Cuisine",
       "image": "https://lh3.googleusercontent.com/p/AF1QipOEoVBOq4O9T_XJlOCA5o6H1s6YhEPKSkbSnPvo=s680-w680-h510",
       "location": "12221 San Pablo Ave #6, Richmond, CA 94805",
       "isFavorite": true,
       "phoneNumber": "(510) 234-9898",
-      "rating": "4.8"
+      "rating": "4.0"
     }
   ]
 }

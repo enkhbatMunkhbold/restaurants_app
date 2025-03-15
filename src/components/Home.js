@@ -6,6 +6,7 @@ import Restaurant from './Restaurant';
 const Home = ({ restaurants, onUpdateList }) => {
 
   const [search, setSearch] = useState('')
+  
   const initialData = {
     name: '',
     image: '../images/default-image.png',
@@ -36,8 +37,8 @@ const Home = ({ restaurants, onUpdateList }) => {
       <hr className='border-line'/>
       <Search onSearch={handleSearch}/><br/><br/>
       <ul className='cards'>
-        {search.length === 0 ? <Restaurant restaurant={initialData}/> : displayRestaurants}
-      </ul>      
+        {search.length === 0 ? <Restaurant restaurant={initialData}/> : displayRestaurants}        
+      </ul>           
     </div>
   )
 }

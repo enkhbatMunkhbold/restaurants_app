@@ -10,7 +10,7 @@ const RestaurantDetails = () => {
   const { name, image, location, isFavorite, phoneNumber, rating } = restaurant 
 
   useEffect(() => {
-    fetch(`http://localhost:6001/restaurants/${restaurantId}`)
+    fetch(`/restaurants/${restaurantId}`)
     .then(res => res.json())
     .then(data => setRestaurant(data))
   }, [restaurantId])
