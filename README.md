@@ -1,5 +1,5 @@
 
-# Phase-2-Project 
+# Restaurants App 
 
 ## Description  
 
